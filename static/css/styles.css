@@ -1,0 +1,96 @@
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #000000;
+	color: #ffffff;
+}
+
+.Send-body{
+	width: 80%;
+	margin: 5% auto;
+	max-width: 550px;
+	/*box-shadow: 10px 10px 10px 0px rgba(122, 121, 112, 1.0);*/
+	border-radius: 15px;
+	/*padding: 20px;*/
+	/*max-height: 500px;*/
+	height: 100%;
+}
+
+.send-mail-h1{
+	text-align: center;
+	height: 30px;
+	position: relative;
+	font-family: monospace;
+}
+
+/*.send-mail-h1:after {
+	content: "";
+	height: 10px;
+	background-color: red;
+}*/
+
+.form-send{
+	padding: 30px 5px;
+}
+	
+form {
+	display: grid;
+	grid-gap: 10px;
+}
+
+input[type="text"],
+input[type="submit"],
+input[type="email"] {
+	padding: 10px;
+	outline: none;
+	font-size: 20px;
+	font-family: sans-serif;
+}
+
+input[type="submit"] {
+	background-color: firebrick;
+	color: whitesmoke;
+	cursor: pointer;
+	outline: none;
+	border: none;
+}
+
+textarea{
+	padding: 10px;
+	outline: none;
+	font-size: 20px;
+	font-family: sans-serif;
+}
+
+
+
+.info,
+.success,
+.warning,
+.error {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+}
+.info {
+  color: #059;
+  background-color: #BEF;
+}
+.success {
+  color: #270;
+  background-color: #DFF2BF;
+}
+.warning {
+  color: #9F6000;
+  background-color: #FEEFB3;
+}
+.error {
+  color: #D8000C;
+  background-color: #FFBABA;
+}

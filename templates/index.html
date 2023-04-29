@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Send Mail</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+
+</head>
+<body>
+	<div class="Send-body">
+		<h1 class="send-mail-h1">Send Fake Mail</h1>
+		<div class="form-send">
+			{% if messages %}
+			<ul class="messages">
+			    {% for message in messages %}
+			    <div{% if message.tags %} class="{{ message.tags }}"{% endif %} >
+				  <i class="fa fa-check"></i>
+				  {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+			        {{ message }}
+				</div>
+			    {% endfor %}
+			</ul>
+			{% endif %}
+			<form method="POST" action="/">
+				{% csrf_token %}
+				{{ send_form }}
+
+
+				<!-- <input type="text" name="subject" id="id_subject" placeholder="Subject">
+				<textarea name="message" id="id_message" rows="6" placeholder="Message..." ></textarea>
+				<input type="email" name="from" id="id_from" placeholder="From...">
+				<input type="email" name="to" id="id_to" placeholder="To..."> -->
+				<input type="submit" name="submit" id="id_submit" value="Send">
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>
